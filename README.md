@@ -4,7 +4,7 @@ React Sweet Progress
 
 A way to quickly add a react progress bar to your app 🌈
 
-![Imgur](http://i.imgur.com/VwXdUoP.gif)
+![demo](http://i.imgur.com/VwXdUoP.gif)
 
 Basic Usage
 -----
@@ -171,6 +171,11 @@ FAQ
 -----
 
 This component based on [ant design progress]( https://ant.design/components/progress/). Huge thanks them for a such an awesome work.
+
+Future Plans
+-----
+- [ ] Create `Circle` progress
+- [ ] Add flexibility to custom styles
 
 ### Updates
 
