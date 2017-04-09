@@ -1,0 +1,56 @@
+@import "./default.scss";
+
+.#{$prefix}-line {
+  width: 100%;
+  border-radius: 100px;
+  background-color: #efefef;
+  vertical-align: middle;
+  // overflow: hidden;
+  &-inner {
+    position: relative;
+    min-height: 10px;
+    border-radius: 100px;
+    transition: width 0.3s ease;
+    // hack to smooth UI
+    // transform: translateZ(0);
+  }
+}
+
+.#{$prefix}-line-inner-status {
+  &-success {
+    background: $color-success;
+  }
+  &-error {
+    background: $color-error;
+  }
+  &-active {
+    background: $color-active;
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 10px;
+      background: #fff;
+      animation: active-anim 2s cubic-bezier(0.25, 1, 0.6, 1) infinite;
+      content: "";
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes active-anim {
+  0% {
+    width: 0;
+    opacity: .1
+  }
+  20% {
+    width: 0;
+    opacity: .5
+  }
+  to {
+    width: 100%;
+    opacity: 0
+  }
+}
