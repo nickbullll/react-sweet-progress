@@ -1,5 +1,6 @@
 React Sweet Progress
 =================
+[![npm version](https://badge.fury.io/js/react-sweet-progress.svg)](https://badge.fury.io/js/react-sweet-progress)
 
 A way to quickly add a react progress bar to your app 🌈
 
