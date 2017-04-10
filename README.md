@@ -146,8 +146,8 @@ Also you can use the `status` param.
 | status   |  set the status of the progress, options: `success`, `error`, `active`           | string        | -       |
 | theme    | set the custom styles of the progress, options: `[status]: { color: [string], symbol: '[any]'}`            | object        | -       |
 | style       | set the custom style of the react progress bar | object | -       |
-| className       | set the custom `class` of the react progress bar                         | object | -       |
-| symbolClassName       | set the `symbol` custom `class`                          | object | -       |
+| className       | set the custom `class` of the react progress bar                         | string | -       |
+| symbolClassName       | set the `symbol` custom `class`                          | string | -       |
 
 Supported Browsers
 ---
