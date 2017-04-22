@@ -17,3 +17,22 @@
   color: rgba(0, 0, 0, 0.7);
   font-weight: 200;
 }
+
+.#{$prefix}-symbol-absolute {
+  display: flex;
+  position: absolute;
+  top: 50%; left: 50%;
+  align-items: center;
+  justify-content: center;
+  transform: translate3d(-50%, -50%, 0);
+  .#{$prefix}-symbol {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.#{$prefix}-circle-outer {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}

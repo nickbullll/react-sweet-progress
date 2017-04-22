@@ -6,7 +6,7 @@ import s from './style/line.scss';
 function Line({ prefixClass, percent, className, status, background }) {
   const classes = cx(s[`${prefixClass}-line`], className);
   const innerClasses = cx(s[`${prefixClass}-line-inner`], {
-    [s[`${prefixClass}-line-inner-status-${status}`]]: status
+    [s[`${prefixClass}-line-inner-status-${status}`]]: !!status
   });
   const style = {
     width: `${percent}%`,

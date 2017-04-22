@@ -1,0 +1,7 @@
+@import "./default.scss";
+
+.#{$prefix}-circle {
+  path {
+    stroke-linecap: round;
+  }
+}

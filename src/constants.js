@@ -5,3 +5,8 @@ export const STATUSES = {
   ERROR: 'error',
   DEFAULT: 'default'
 };
+export const COLOR_MAP = {
+  [STATUSES.ACTIVE]: '#138ce4',
+  [STATUSES.SUCCESS]: '#049e51',
+  [STATUSES.ERROR]: '#e23f33'
+};

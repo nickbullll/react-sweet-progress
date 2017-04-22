@@ -17,14 +17,7 @@
 }
 
 .#{$prefix}-line-inner-status {
-  &-success {
-    background: $color-success;
-  }
-  &-error {
-    background: $color-error;
-  }
   &-active {
-    background: $color-active;
     &:before {
       position: absolute;
       top: 0;
