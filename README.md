@@ -4,7 +4,7 @@ React Sweet Progress
 
 A way to quickly add a react progress bar to your app 🌈
 
-![Imgur](http://i.imgur.com/Lhn7hqC.gif)
+![Imgur](http://i.imgur.com/ZYirw74.gif)
 
 Basic Usage
 -----
@@ -26,6 +26,12 @@ Basic Usage
     ```
 
   ![Imgur](http://i.imgur.com/f6amLHz.png)
+
+  ```
+  <Progress type="circle" percent={100} status="success" />
+  ```
+
+  ![Imgur](http://i.imgur.com/YdBD14Tm.png)
 
 Customize
 -----
@@ -136,6 +142,43 @@ Also you can use the `status` param.
 
 ![Imgur](http://i.imgur.com/ZF95CSp.png)
 
+
+### Circle width 😲
+
+`Width` param can set the size of `circle` progress bar, also it's set `font` and `icon` sizes automatically.
+
+```
+<Progress
+  type="circle"
+  width={70}
+  percent={70}
+/>
+<Progress
+  type="circle"
+  percent={30}
+/>
+```
+
+![Imgur](http://i.imgur.com/pkwejEs.png)
+
+### Circle strokeWidth 🤗
+
+With `strokeWidth` param you can customize the `path` circle `strokeWidth`.
+
+```
+<Progress
+  type="circle"
+  strokeWidth={3}
+  percent={70}
+/>
+<Progress
+  type="circle"
+  percent={30}
+/>
+```
+
+![Imgur](http://i.imgur.com/qH4xv4B.png)
+
 ## API
 
 ### Progress
@@ -146,6 +189,9 @@ Also you can use the `status` param.
 | status   |  set the status of the progress, options: `success`, `error`, `active`           | string        | -       |
 | theme    | set the custom styles of the progress, options: `[status]: { color: [string], symbol: '[any]'}`            | object        | -       |
 | style       | set the custom style of the react progress bar | object | -       |
+| type       | set the type of the progress bar, options: `circle` | string | -       |
+| width       | set sizes of progress bar type `circle` | number | 132       |
+| strokeWidth       | set strokeWidth of progress bar type `circle` | number | 6       |
 | className       | set the custom `class` of the react progress bar                         | object | -       |
 | symbolClassName       | set the `symbol` custom `class`                          | object | -       |
 
@@ -174,9 +220,11 @@ This component based on [ant design progress]( https://ant.design/components/pro
 
 Future Plans
 -----
-- [ ] Create `Circle` progress
+- [x] Create `Circle` progress
 - [ ] Add flexibility to custom styles
 
 ### Updates
 
-1.0.0 first release
+1.1.0 Added `Circle` progress
+
+1.0.0 First release
