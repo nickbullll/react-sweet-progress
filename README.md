@@ -4,7 +4,7 @@ React Sweet Progress
 
 A way to quickly add a react progress bar to your app 🌈
 
-![Imgur](http://i.imgur.com/ZYirw74.gif)
+![Imgur](http://i.imgur.com/iVFQuUo.gif)
 
 Basic Usage
 -----
