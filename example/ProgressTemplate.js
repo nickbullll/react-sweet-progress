@@ -21,14 +21,17 @@ export default class ProgressTemplate extends Component {
 
   render() {
     return (
-      <div style={{ display: 'flex', margin: '0 0 20px 0' }}>
+      <div style={{ display: 'flex', alignItems: 'center', margin: '0 0 20px 0' }}>
         <button onClick={this.onDecClick}>-</button>
         <button onClick={this.onIncClick}>+</button>
         <Progress
           percent={this.state.percent}
           status={this.props.status}
           theme={this.props.theme}
-          style={{ padding: '0 0  0 10px' }}
+          type={this.props.type}
+          width={this.props.width}
+          strokeWidth={this.props.strokeWidth}
+          style={{ margin: '0 0 0 10px' }}
         />
       </div>
     )

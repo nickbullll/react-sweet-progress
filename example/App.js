@@ -9,6 +9,34 @@ export default class App extends Component {
       <div className={s.root}>
         <div className={s.h1}>React Sweet Progress</div>
         <div className={s.h2}>https://github.com/abraztsov/react-sweet-progress</div>
+        <div className={s.circles}>
+          <ProgressTemplate
+            percent={100}
+            type="circle"
+          />
+          <ProgressTemplate
+            type="circle"
+            theme={{
+              success: {
+                symbol: '🤰',
+                color: '#d666eb'
+              },
+              active: {
+                symbol: '🥗',
+                color: 'rgb(141, 189, 87)'
+              },
+              default: {
+                symbol: '😋'
+              }
+            }}
+          />
+          <ProgressTemplate
+            percent={100}
+            type="circle"
+            status="error"
+            strokeWidth={3}
+          />
+        </div>
         <ProgressTemplate
           percent={70}
         />
