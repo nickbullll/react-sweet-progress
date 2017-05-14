@@ -9,10 +9,14 @@ A way to quickly add a react progress bar to your app 🌈
 Basic Usage
 -----
 
-1. Install via `npm`
+1. Install via npm and yarn
 
     ```
     npm i -S react-sweet-progress
+
+    // or
+
+    yarn add react-sweet-progress
     ```
 2. Import `Progress` and progress bar styles
 
