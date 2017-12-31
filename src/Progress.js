@@ -37,7 +37,7 @@ export default class Progress extends Component {
       case STATUSES.ERROR:
         return <Icon name="error" size={size} />;
       default:
-        return `${this.props.percent}%`;
+        return [`${this.props.percent}`,'%'];
     }
   }
 
@@ -58,19 +58,28 @@ export default class Progress extends Component {
 
     const themeProgress = theme && theme[progressStatus];
     const progressColor = themeProgress ? themeProgress.color : COLOR_MAP[progressStatus];
-
+    const outlineColor = themeProgress ? themeProgress.outlineColor: "#efefef"
     if (type === 'circle') {
       const circleSize = width || 132;
       const fontSize = (circleSize * 0.16) + 6;
       const symbolSize = fontSize * 1.25;
       const symbol = (themeProgress && themeProgress.symbol) ||
         this.getSymbolByStatus(progressStatus, symbolSize);
+        console.log(style)
       const circleStyle = {
         width: circleSize,
         height: circleSize,
         fontSize,
-        ...style
+        ...style.circle
       };
+
+      const valueStyle = {
+        ...style.value
+      };
+
+      const percentStyle = {
+        ...style.percent
+      }
       const circleWidth = strokeWidth || 6;
       const gapPos = 'top';
       const gapDeg = 0;
@@ -81,12 +90,16 @@ export default class Progress extends Component {
             percent={percent}
             strokeWidth={circleWidth}
             strokeColor={progressColor}
+            outlineColor={outlineColor}
             prefixClass={prefixClass}
             gapDegree={gapDeg}
             gapPosition={gapPos}
           />
           <div className={s[`${prefixClass}-symbol-absolute`]}>
-            <div className={cx(s[`${prefixClass}-symbol`], symbolClassName)}>{symbol}</div>
+            <div style={valueStyle} className={cx(s[`${prefixClass}-symbol`], symbolClassName)}>{symbol.props?symbol:symbol[0]}</div>
+            {!symbol.props?(
+              <div style={percentStyle} className="">{symbol[1]}</div>
+            ):null}
           </div>
         </div>
       );
