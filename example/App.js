@@ -1,21 +1,28 @@
-import React, { Component, PropTypes } from 'react';
-import s from './style.scss';
-import ProgressTemplate from './ProgressTemplate';
-import './style.scss';
+import React, { Component, PropTypes } from 'react'
+import s from './style.scss'
+import ProgressTemplate from './ProgressTemplate'
+import './style.scss'
 
 export default class App extends Component {
-  render() {
+  render () {
     return (
       <div className={s.root}>
         <div className={s.h1}>React Sweet Progress</div>
         <div className={s.h2}>https://github.com/abraztsov/react-sweet-progress</div>
         <div className={s.circles}>
+
           <ProgressTemplate
             percent={100}
-            type="circle"
-          />
+            type='circle'
+            theme={{
+              active: {
+                color: 'red',
+                outlineColor: 'orange'
+              }
+            }}
+        />
           <ProgressTemplate
-            type="circle"
+            type='circle'
             theme={{
               success: {
                 symbol: '🤰',
@@ -32,8 +39,8 @@ export default class App extends Component {
           />
           <ProgressTemplate
             percent={100}
-            type="circle"
-            status="error"
+            type='circle'
+            status='error'
             strokeWidth={3}
           />
         </div>
@@ -41,7 +48,7 @@ export default class App extends Component {
           percent={70}
         />
         <ProgressTemplate
-          status="error"
+          status='error'
           percent={40}
         />
         <ProgressTemplate

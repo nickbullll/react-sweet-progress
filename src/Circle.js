@@ -9,6 +9,7 @@ export default class Circle extends Component {
     className: PropTypes.className,
     strokeWidth: PropTypes.number,
     strokeColor: PropTypes.string,
+    outlineColor: PropTypes.string,
     trailColor: PropTypes.string,
     style: PropTypes.object
   }
@@ -39,7 +40,7 @@ export default class Circle extends Component {
 
   render() {
     const {
-      prefixClass, strokeWidth, strokeColor, trailColor, style, className, ...restProps
+      prefixClass, strokeWidth, strokeColor,outlineColor, trailColor, style, className, ...restProps
     } = this.props;
     const classes = cx(s[`${prefixClass}-circle`], className);
     const { pathString, trailPathStyle, strokePathStyle } = this.getPathStyles();
@@ -55,7 +56,7 @@ export default class Circle extends Component {
       >
         <path
           d={pathString}
-          stroke="#efefef"
+          stroke={outlineColor||"#efefef"}
           strokeWidth={strokeWidth}
           fillOpacity="0"
           style={trailPathStyle}

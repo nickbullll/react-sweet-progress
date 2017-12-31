@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react';
-import { Progress } from '../src';
+import React, {Component, PropTypes} from 'react';
+import {Progress} from '../src';
 import './style.scss';
 
 export default class ProgressTemplate extends Component {
@@ -12,16 +12,29 @@ export default class ProgressTemplate extends Component {
   }
 
   onDecClick = () => {
-    this.setState({ percent: this.state.percent - 10 > 0 ? this.state.percent - 10 : 0 });
+    this.setState({
+      percent: this.state.percent - 10 > 0
+        ? this.state.percent - 10
+        : 0
+    });
   }
 
   onIncClick = () => {
-    this.setState({ percent: this.state.percent + 10 < 100 ? this.state.percent + 10 : 100 });
+    this.setState({
+      percent: this.state.percent + 10 < 100
+        ? this.state.percent + 10
+        : 100
+    });
   }
 
   render() {
     return (
-      <div style={{ display: 'flex', alignItems: 'center', margin: '0 0 20px 0' }}>
+      <div
+        style={{
+        display: 'flex',
+        alignItems: 'center',
+        margin: '0 0 20px 0'
+      }}>
         <button onClick={this.onDecClick}>-</button>
         <button onClick={this.onIncClick}>+</button>
         <Progress
@@ -31,8 +44,22 @@ export default class ProgressTemplate extends Component {
           type={this.props.type}
           width={this.props.width}
           strokeWidth={this.props.strokeWidth}
-          style={{ margin: '0 0 0 10px' }}
-        />
+          style={{
+          circle: {
+            margin: '0 0 0 10px',
+            color: 'black'
+          },
+          value:{
+            
+            'margin-right':'2px',
+            'font-size':'40px'
+          },
+          percent:{
+            'font-size':'20px',
+            'position':'relative',
+            'top':'10px'
+          }
+        }}/>
       </div>
     )
   }
