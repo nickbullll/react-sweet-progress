@@ -103,7 +103,7 @@ With `theme` param you can customize icons and styles of the progress bar.
     default: {
       symbol: '😱',
       color: '#fbc630'
-    },
+    }
   }}
 />
 ```
@@ -112,7 +112,7 @@ With `theme` param you can customize icons and styles of the progress bar.
 ![Imgur](http://i.imgur.com/VK7AoHd.png)
 ![Imgur](http://i.imgur.com/fTcn96g.png)
 
-If you don't specify the theme `trail color`, then the deafult color is used.
+If you don't specify the theme `trail color`, then the deafult value of `#efefef` will be used.
 ```
 <Progress
   theme={
@@ -136,11 +136,11 @@ If you don't specify the theme `trail color`, then the deafult color is used.
         symbol: this.state.percent + '%',
         trailColor: 'lime',
         color: 'green'
-      },
+      }
     }
   }
-  />
-  ```
+/>
+```
 ![Imgur](https://i.imgur.com/QUu7ygb.gif)
 
 If you don't pass custom `status` then it will use the default color theme.
