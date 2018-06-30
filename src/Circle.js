@@ -55,7 +55,7 @@ export default class Circle extends Component {
       >
         <path
           d={pathString}
-          stroke={trailColor || "#efefef"}
+          stroke={trailColor}
           strokeWidth={strokeWidth}
           fillOpacity="0"
           style={trailPathStyle}

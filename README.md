@@ -191,7 +191,7 @@ With `strokeWidth` param you can customize the `path` circle `strokeWidth`.
 |----------|----------------------------------------------------------------------------------------|---------------|---------|
 | percent     | set the completion percentage                                      | number        | 0    |
 | status   |  set the status of the progress, options: `success`, `error`, `active`           | string        | -       |
-| theme    | set the custom styles of the progress, options: `[status]: { color: [string], symbol: '[any]'}`            | object        | -       |
+| theme    | set the custom styles of the progress, options: `[status]: { color: [string], trailColor: [string], symbol: '[any]'}`            | object        | -       |
 | style       | set the custom style of the react progress bar | object | -       |
 | type       | set the type of the progress bar, options: `circle` | string | -       |
 | width       | set sizes of progress bar type `circle` | number | 132       |
@@ -228,6 +228,8 @@ Future Plans
 - [ ] Add flexibility to custom styles
 
 ### Updates
+
+1.1.1 Trail color can now be specified by a progress theme.
 
 1.1.0 Added `Circle` progress
 
