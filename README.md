@@ -146,6 +146,20 @@ Also you can use the `status` param.
 
 ![Imgur](http://i.imgur.com/ZF95CSp.png)
 
+### Trail color 🤗
+
+```
+<Progress
+  theme={{
+    active: {
+      trailColor:'lightblue',
+      color: 'blue'
+    },
+  }}
+/>
+```
+
+![Imgur](https://i.imgur.com/QUu7ygb.gif)
 
 ### Circle width 😲
 
