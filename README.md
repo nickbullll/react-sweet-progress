@@ -103,7 +103,7 @@ With `theme` param you can customize icons and styles of the progress bar.
     default: {
       symbol: '😱',
       color: '#fbc630'
-    }
+    },
   }}
 />
 ```
@@ -111,6 +111,37 @@ With `theme` param you can customize icons and styles of the progress bar.
 ![Imgur](http://i.imgur.com/bJmhojg.png)
 ![Imgur](http://i.imgur.com/VK7AoHd.png)
 ![Imgur](http://i.imgur.com/fTcn96g.png)
+
+If you don't specify the theme `trail color`, then the deafult color is used.
+```
+<Progress
+  theme={
+    {
+      error: {
+        symbol: this.state.percent + '%',
+        trailColor: 'pink',
+        color: 'red'
+      },
+      default: {
+        symbol: this.state.percent + '%',
+        trailColor: 'lightblue',
+        color: 'blue'
+      },
+      active: {
+        symbol: this.state.percent + '%',
+        trailColor: 'yellow',
+        color: 'orange'
+      },
+      success: {
+        symbol: this.state.percent + '%',
+        trailColor: 'lime',
+        color: 'green'
+      },
+    }
+  }
+  />
+  ```
+![Imgur](https://i.imgur.com/QUu7ygb.gif)
 
 If you don't pass custom `status` then it will use the default color theme.
 
@@ -145,21 +176,6 @@ Also you can use the `status` param.
 ```
 
 ![Imgur](http://i.imgur.com/ZF95CSp.png)
-
-### Trail color 🤗
-
-```
-<Progress
-  theme={{
-    active: {
-      trailColor:'lightblue',
-      color: 'blue'
-    },
-  }}
-/>
-```
-
-![Imgur](https://i.imgur.com/QUu7ygb.gif)
 
 ### Circle width 😲
 
