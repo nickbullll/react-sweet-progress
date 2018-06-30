@@ -1,4 +1,5 @@
 export const prefixClass = 'react-sweet-progress';
+export const DEFAULT_TRAIL_COLOR = '#efefef';
 export const STATUSES = {
   ACTIVE: 'active',
   SUCCESS: 'success',
