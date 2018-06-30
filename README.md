@@ -112,6 +112,37 @@ With `theme` param you can customize icons and styles of the progress bar.
 ![Imgur](http://i.imgur.com/VK7AoHd.png)
 ![Imgur](http://i.imgur.com/fTcn96g.png)
 
+If you don't specify the theme `trail color`, then the deafult value of `#efefef` will be used.
+```
+<Progress
+  theme={
+    {
+      error: {
+        symbol: this.state.percent + '%',
+        trailColor: 'pink',
+        color: 'red'
+      },
+      default: {
+        symbol: this.state.percent + '%',
+        trailColor: 'lightblue',
+        color: 'blue'
+      },
+      active: {
+        symbol: this.state.percent + '%',
+        trailColor: 'yellow',
+        color: 'orange'
+      },
+      success: {
+        symbol: this.state.percent + '%',
+        trailColor: 'lime',
+        color: 'green'
+      }
+    }
+  }
+/>
+```
+![Imgur](https://i.imgur.com/QUu7ygb.gif)
+
 If you don't pass custom `status` then it will use the default color theme.
 
 ```
@@ -145,7 +176,6 @@ Also you can use the `status` param.
 ```
 
 ![Imgur](http://i.imgur.com/ZF95CSp.png)
-
 
 ### Circle width 😲
 
@@ -191,7 +221,7 @@ With `strokeWidth` param you can customize the `path` circle `strokeWidth`.
 |----------|----------------------------------------------------------------------------------------|---------------|---------|
 | percent     | set the completion percentage                                      | number        | 0    |
 | status   |  set the status of the progress, options: `success`, `error`, `active`           | string        | -       |
-| theme    | set the custom styles of the progress, options: `[status]: { color: [string], symbol: '[any]'}`            | object        | -       |
+| theme    | set the custom styles of the progress, options: `[status]: { color: [string], trailColor: [string], symbol: '[any]'}`            | object        | -       |
 | style       | set the custom style of the react progress bar | object | -       |
 | type       | set the type of the progress bar, options: `circle` | string | -       |
 | width       | set sizes of progress bar type `circle` | number | 132       |
@@ -228,6 +258,8 @@ Future Plans
 - [ ] Add flexibility to custom styles
 
 ### Updates
+
+1.1.1 Trail color can now be specified by a progress theme.
 
 1.1.0 Added `Circle` progress
 

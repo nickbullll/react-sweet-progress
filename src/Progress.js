@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import cx from 'classnames';
-import { prefixClass, STATUSES, COLOR_MAP } from './constants';
+import { prefixClass, STATUSES, COLOR_MAP, DEFAULT_TRAIL_COLOR } from './constants';
 import s from './style/progress.scss';
 import Line from './Line';
 import Circle from './Circle';
@@ -58,6 +58,7 @@ export default class Progress extends Component {
 
     const themeProgress = theme && theme[progressStatus];
     const progressColor = themeProgress ? themeProgress.color : COLOR_MAP[progressStatus];
+    const trailColor = themeProgress ? themeProgress.trailColor : DEFAULT_TRAIL_COLOR;
 
     if (type === 'circle') {
       const circleSize = width || 132;
@@ -81,6 +82,7 @@ export default class Progress extends Component {
             percent={percent}
             strokeWidth={circleWidth}
             strokeColor={progressColor}
+            trailColor={trailColor}
             prefixClass={prefixClass}
             gapDegree={gapDeg}
             gapPosition={gapPos}
@@ -100,6 +102,7 @@ export default class Progress extends Component {
           percent={percent}
           status={progressStatus}
           background={progressColor}
+          trailColor={trailColor}
         />
         <div className={cx(s[`${prefixClass}-symbol`], symbolClassName)}>{symbol}</div>
       </div>
