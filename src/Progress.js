@@ -35,7 +35,7 @@ export default class Progress extends Component {
       case STATUSES.SUCCESS:
         return <Icon name="success" size={size} />;
       case STATUSES.ERROR:
-        return <Icon name="error" size={size} />;
+        return `${this.props.percent}%`;
       default:
         return `${this.props.percent}%`;
     }
@@ -50,8 +50,10 @@ export default class Progress extends Component {
 
     if (percent === 0) {
       progressStatus = STATUSES.DEFAULT;
-    } else if (percent >= 100 && !status) {
+    } else if (percent === 100 && !status) {
       progressStatus = STATUSES.SUCCESS;
+    } else if (percent > 100 && !status) {
+      progressStatus = STATUSES.ERROR;
     } else {
       progressStatus = status || STATUSES.ACTIVE;
     }

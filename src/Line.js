@@ -8,8 +8,14 @@ function Line({ prefixClass, percent, className, status, background, trailColor 
   const innerClasses = cx(s[`${prefixClass}-line-inner`], {
     [s[`${prefixClass}-line-inner-status-${status}`]]: !!status
   });
+  let newPercent = 0;
+  if (percent > 100) {
+    newPercent = 100;
+  } else {
+    newPercent = percent;
+  };
   const progressStyle = {
-    width: `${percent}%`,
+    width: `${newPercent}%`,
     backgroundColor: background
   };
   const trailStyle = {

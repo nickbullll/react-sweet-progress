@@ -38,7 +38,7 @@ export default class App extends Component {
           />
         </div>
         <ProgressTemplate
-          percent={70}
+          percent={140}
         />
         <ProgressTemplate
           status="error"
